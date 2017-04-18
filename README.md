@@ -1,9 +1,13 @@
 # PasscodeView
 
 An Passcode view view for Android.
+ 
 
-![PasscodeView](https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo1.png?raw=true) ![PasscodeView](https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo2.png?raw=true) ![PasscodeView](https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo.gif?raw=true)
-
+<div style="display:flex" >
+ <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo1.png" width="200px" style="margin: 10px;">
+ <img src="https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo2.png" width="200px" style="margin: 10px;">
+ <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo.gif" width="200px" style="margin: 10px;">
+</div>
 
 ## Usage
 
