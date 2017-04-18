@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PasscodeView</string>
+    <string name="please_enter_passcode">Enter a passcode of 4-6 digits</string>
+    <string name="lock_input_again">Re-enter new passcode</string>
+    <string name="lock_input_not_match">Passcodes do not match.</string>
+</resources>

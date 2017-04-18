@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hanks.demo.PasscodeActivity2">
+
+    <com.hanks.passcodeview.PasscodeView
+        android:id="@+id/passcodeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#222222"
+        app:firstInputTip="Enter a passcode of 5 digits "
+        app:correctStateColor="#71bb4d"
+        app:wrongStateColor="#ea2b46"
+        app:normalStateColor="#ffffff"
+        app:numberTextColor="#222222"
+        app:passcodeLength="5"
+        app:passcodeViewType="set_passcode"/>
+
+</FrameLayout>
