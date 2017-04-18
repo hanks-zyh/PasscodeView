@@ -4,9 +4,9 @@ An Passcode view view for Android.
  
 
 <div style="display:flex" >
- <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo1.png" width="200px" style="margin: 10px;">
- <img src="https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo2.png" width="200px" style="margin: 10px;">
- <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo.gif" width="200px" style="margin: 10px;">
+ <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo1.png" width="220px" style="margin: 20px;">
+ <img src="https://github.com/hanks-zyh/PasscodeView/blob/master/screenshot/demo2.png" width="220px" style="margin: 20px;">
+ <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo.gif" width="220px" style="margin: 20px;">
 </div>
 
 ## Usage
