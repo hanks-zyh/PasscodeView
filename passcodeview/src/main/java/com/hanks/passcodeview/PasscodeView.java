@@ -173,12 +173,119 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         addChar(number);
     }
 
+    public String getLocalPasscode() {
+        return localPasscode;
+    }
+
+    public PasscodeViewListener getListener() {
+        return listener;
+    }
+
+    public String getFirstInputTip() {
+        return firstInputTip;
+    }
+
+    public PasscodeView setFirstInputTip(String firstInputTip) {
+        this.firstInputTip = firstInputTip;
+        return this;
+    }
+
+    public String getSecondInputTip() {
+        return secondInputTip;
+    }
+
+    public PasscodeView setSecondInputTip(String secondInputTip) {
+        this.secondInputTip = secondInputTip;
+        return this;
+    }
+
+    public String getWrongLengthTip() {
+        return wrongLengthTip;
+    }
+
+    public PasscodeView setWrongLengthTip(String wrongLengthTip) {
+        this.wrongLengthTip = wrongLengthTip;
+        return this;
+    }
+
+    public String getWrongInputTip() {
+        return wrongInputTip;
+    }
+
+    public PasscodeView setWrongInputTip(String wrongInputTip) {
+        this.wrongInputTip = wrongInputTip;
+        return this;
+    }
+
+    public String getCorrectInputTip() {
+        return correctInputTip;
+    }
+
+    public PasscodeView setCorrectInputTip(String correctInputTip) {
+        this.correctInputTip = correctInputTip;
+        return this;
+    }
+
+    public int getPasscodeLength() {
+        return passcodeLength;
+    }
+
+    public PasscodeView setPasscodeLength(int passcodeLength) {
+        this.passcodeLength = passcodeLength;
+        return this;
+    }
+
+    public int getCorrectStatusColor() {
+        return correctStatusColor;
+    }
+
+    public PasscodeView setCorrectStatusColor(int correctStatusColor) {
+        this.correctStatusColor = correctStatusColor;
+        return this;
+    }
+
+    public int getWrongStatusColor() {
+        return wrongStatusColor;
+    }
+
+    public PasscodeView setWrongStatusColor(int wrongStatusColor) {
+        this.wrongStatusColor = wrongStatusColor;
+        return this;
+    }
+
+    public int getNormalStatusColor() {
+        return normalStatusColor;
+    }
+
+    public PasscodeView setNormalStatusColor(int normalStatusColor) {
+        this.normalStatusColor = normalStatusColor;
+        return this;
+    }
+
+    public int getNumberTextColor() {
+        return numberTextColor;
+    }
+
+    public PasscodeView setNumberTextColor(int numberTextColor) {
+        this.numberTextColor = numberTextColor;
+        return this;
+    }
+
+    public @PasscodeViewType int getPasscodeType() {
+        return passcodeType;
+    }
+
+    public PasscodeView setPasscodeType(@PasscodeViewType int passcodeType) {
+        this.passcodeType = passcodeType;
+        return this;
+    }
+
     /**
      * set  localPasscode
      *
      * @param localPasscode the code will to check
      */
-    public void setLocalPasscode(String localPasscode) {
+    public PasscodeView setLocalPasscode(String localPasscode) {
         for (int i = 0; i < localPasscode.length(); i++) {
             char c = localPasscode.charAt(i);
             if (c < '0' || c > '9') {
@@ -187,6 +294,7 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         }
         this.localPasscode = localPasscode;
         this.passcodeType = TYPE_CHECK_PASSCODE;
+        return this;
     }
 
     private void next() {
@@ -341,8 +449,9 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         return sb.toString();
     }
 
-    public void setListener(PasscodeViewListener listener) {
+    public PasscodeView setListener(PasscodeViewListener listener) {
         this.listener = listener;
+        return this;
     }
 
     /**
