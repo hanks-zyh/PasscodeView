@@ -13,7 +13,7 @@ An Passcode view view for Android.
 
 ```gradle
 dependencies {
-    compile 'com.hanks:passcodeview:0.1.1'
+    compile 'com.hanks:passcodeview:0.1.2'
 }
 ```
 

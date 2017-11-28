@@ -304,14 +304,11 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * <p>
      * <pre>
      * passcodeView.setListener(new PasscodeView.PasscodeViewListener() {
-     * @Override
      * public void onFail() {
      * }
      *
-     * @Override
      * public void onSuccess(String number) {
      * String encrypted = SecurePreferences.hashPrefKey(raw);
      * SharedPreferences.Editor editor = keys.edit();
@@ -326,7 +323,6 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
      * public PView(Context context) {
      * super(context);
      * }
-     * @Override
      * protected boolean equals(String psd) {
      * String after = SecurePreferences.hashPrefKey(raw);
      * return after.equals(encrypted_passcode);
@@ -335,6 +331,8 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
      * PView passcodeView = new PView(PasscodeActivity.this);
      *
      * </pre>
+     * @param val the input number string
+     * @return true if val is right passcode
      */
     protected boolean equals(String val) {
         return localPasscode.equals(val);
