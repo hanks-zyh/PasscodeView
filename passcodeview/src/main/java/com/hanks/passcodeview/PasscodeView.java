@@ -297,6 +297,10 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         return this;
     }
 
+    protected Boolean equals(String val) {
+        return localPasscode.equals(val);
+    }
+
     private void next() {
         if (passcodeType == TYPE_CHECK_PASSCODE && TextUtils.isEmpty(localPasscode)) {
             throw new RuntimeException("must set localPasscode when type is TYPE_CHECK_PASSCODE");
@@ -318,7 +322,7 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
             return;
         }
 
-        if (localPasscode.equals(psd)) {
+        if (equals(psd)) {
             // match
             runOkAnimation();
         } else {
