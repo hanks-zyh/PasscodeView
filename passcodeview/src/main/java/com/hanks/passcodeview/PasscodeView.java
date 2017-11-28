@@ -177,8 +177,30 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         return localPasscode;
     }
 
+    /**
+     * set  localPasscode
+     *
+     * @param localPasscode the code will to check
+     */
+    public PasscodeView setLocalPasscode(String localPasscode) {
+        for (int i = 0; i < localPasscode.length(); i++) {
+            char c = localPasscode.charAt(i);
+            if (c < '0' || c > '9') {
+                throw new RuntimeException("must be number digit");
+            }
+        }
+        this.localPasscode = localPasscode;
+        this.passcodeType = TYPE_CHECK_PASSCODE;
+        return this;
+    }
+
     public PasscodeViewListener getListener() {
         return listener;
+    }
+
+    public PasscodeView setListener(PasscodeViewListener listener) {
+        this.listener = listener;
+        return this;
     }
 
     public String getFirstInputTip() {
@@ -271,7 +293,8 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         return this;
     }
 
-    public @PasscodeViewType int getPasscodeType() {
+    public @PasscodeViewType
+    int getPasscodeType() {
         return passcodeType;
     }
 
@@ -281,23 +304,39 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
     }
 
     /**
-     * set  localPasscode
+     * <p>
+     * <pre>
+     * passcodeView.setListener(new PasscodeView.PasscodeViewListener() {
+     * @Override
+     * public void onFail() {
+     * }
      *
-     * @param localPasscode the code will to check
+     * @Override
+     * public void onSuccess(String number) {
+     * String encrypted = SecurePreferences.hashPrefKey(raw);
+     * SharedPreferences.Editor editor = keys.edit();
+     * editor.putString("passcode", encrypted);
+     * editor.commit();
+     * finish();
+     * }
+     * });
+     * Second, compare using the overridden equals() method:
+     *
+     * class PView extends PasscodeView {
+     * public PView(Context context) {
+     * super(context);
+     * }
+     * @Override
+     * protected boolean equals(String psd) {
+     * String after = SecurePreferences.hashPrefKey(raw);
+     * return after.equals(encrypted_passcode);
+     * }
+     * }
+     * PView passcodeView = new PView(PasscodeActivity.this);
+     *
+     * </pre>
      */
-    public PasscodeView setLocalPasscode(String localPasscode) {
-        for (int i = 0; i < localPasscode.length(); i++) {
-            char c = localPasscode.charAt(i);
-            if (c < '0' || c > '9') {
-                throw new RuntimeException("must be number digit");
-            }
-        }
-        this.localPasscode = localPasscode;
-        this.passcodeType = TYPE_CHECK_PASSCODE;
-        return this;
-    }
-
-    protected Boolean equals(String val) {
+    protected boolean equals(String val) {
         return localPasscode.equals(val);
     }
 
@@ -451,11 +490,6 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
             sb.append(num);
         }
         return sb.toString();
-    }
-
-    public PasscodeView setListener(PasscodeViewListener listener) {
-        this.listener = listener;
-        return this;
     }
 
     /**
