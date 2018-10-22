@@ -132,6 +132,12 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
                 deleteChar();
             }
         });
+        numberB.setOnLongClickListener(new OnLongClickListener() {
+            @Override public boolean onLongClick(View view) {
+                deleteAllChars();
+                return true;
+            }
+        });
         numberOK.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -400,6 +406,14 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
             return;
         }
         layout_psd.removeViewAt(childCount - 1);
+    }
+
+    private void deleteAllChars() {
+        int childCount = layout_psd.getChildCount();
+        if (childCount <= 0) {
+            return;
+        }
+        layout_psd.removeAllViews();
     }
 
     public void runTipTextAnimation() {
