@@ -426,7 +426,7 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
                                 super.onAnimationEnd(animation);
                                 setPSDViewBackgroundResource(normalStatusColor);
                                 if (secondInput && listener != null) {
-                                    listener.onFail();
+                                    listener.onFail(getPasscodeFromView());
                                 }
                             }
                         });
@@ -510,7 +510,7 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
 
     public interface PasscodeViewListener {
 
-        void onFail();
+        void onFail(String wrongNumber);
 
         void onSuccess(String number);
     }

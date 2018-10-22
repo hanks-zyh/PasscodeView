@@ -28,10 +28,10 @@ public class PasscodeActivity3 extends AppCompatActivity {
                 .setPasscodeLength(4)
                 .setLocalPasscode("5555")
                 .setListener(new PasscodeView.PasscodeViewListener() {
-            @Override
-            public void onFail() {
-
-            }
+                    @Override
+                    public void onFail(String wrongNumber) {
+                        Toast.makeText(getApplication(),"Wrong!!",Toast.LENGTH_SHORT).show();
+                    }
 
             @Override
             public void onSuccess(String number) {

@@ -19,8 +19,8 @@ public class PasscodeActivity extends AppCompatActivity {
         PasscodeView passcodeView = (PasscodeView) findViewById(R.id.passcodeView);
         passcodeView.setListener(new PasscodeView.PasscodeViewListener() {
             @Override
-            public void onFail() {
-
+            public void onFail(String wrongNumber) {
+                Toast.makeText(getApplication(),"Wrong!!",Toast.LENGTH_SHORT).show();
             }
 
             @Override
