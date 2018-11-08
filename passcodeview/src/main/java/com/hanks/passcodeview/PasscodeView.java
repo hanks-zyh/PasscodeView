@@ -9,6 +9,7 @@ import android.graphics.PorterDuff;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.content.res.AppCompatResources;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.lang.annotation.Retention;
@@ -41,6 +43,7 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
     private TextView number0, number1, number2, number3, number4, number5, number6, number7, number8, number9;
     private ImageView numberB, numberOK;
     private ImageView iv_lock, iv_ok;
+    private RelativeLayout relativeLayoutDraw;
     private View cursor;
 
     private String firstInputTip = "Enter a passcode of 4 digits";
@@ -99,6 +102,9 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
         cursor = findViewById(R.id.cursor);
         iv_lock = (ImageView) findViewById(R.id.iv_lock);
         iv_ok = (ImageView) findViewById(R.id.iv_ok);
+        relativeLayoutDraw = (RelativeLayout) findViewById(R.id.rv_with_drawable);
+
+        relativeLayoutDraw.setBackgroundDrawable(AppCompatResources.getDrawable(getContext(),R.drawable.lock_bg_white));
 
         tv_input_tip.setText(firstInputTip);
 
