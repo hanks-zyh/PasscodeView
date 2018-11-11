@@ -1,4 +1,4 @@
-# PasscodeView
+# PasscodeView                                      <img id="badge" src="https://jitpack.io/v/JobGetabu/PasscodeView.svg">
 
 An Passcode view view for Android.
  
@@ -9,13 +9,24 @@ An Passcode view view for Android.
  <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo.gif" width="220px" style="margin: 20px;">
 </div>
 
-## Usage
+## Usage : update from to v0.1.3
 
 ```gradle
 dependencies {
-    compile 'com.hanks:passcodeview:0.1.2'
+    implementation 'com.github.JobGetabu:PasscodeView:0.1.3'
 }
 ```
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ ```
 
 ```xml
 <com.hanks.passcodeview.PasscodeView
