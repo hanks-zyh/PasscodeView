@@ -68,9 +68,9 @@
         android:layout_weight="1"/>
 
     <RelativeLayout
+        android:id="@+id/rv_with_drawable"
         android:layout_width="match_parent"
         android:layout_height="312dp"
-        android:background="@drawable/lock_bg_white"
         android:padding="48dp">
 
         <TextView
