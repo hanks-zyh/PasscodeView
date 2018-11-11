@@ -9,7 +9,7 @@ An Passcode view view for Android.
  <img src="https://github.com/hanks-zyh/PasscodeView/raw/master/screenshot/demo.gif" width="220px" style="margin: 20px;">
 </div>
 
-## Usage : update from to v0.1.3
+## Add 
 
 ```gradle
 dependencies {
@@ -27,6 +27,8 @@ allprojects {
 		}
 	}
  ```
+
+## Usage
 
 ```xml
 <com.hanks.passcodeview.PasscodeView
