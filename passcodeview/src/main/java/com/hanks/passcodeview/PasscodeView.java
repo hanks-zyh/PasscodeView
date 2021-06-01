@@ -82,11 +82,11 @@ public class PasscodeView extends FrameLayout implements View.OnClickListener {
             typedArray.recycle();
         }
 
-        firstInputTip = firstInputTip == null ? "Enter a passcode of 4 digits" : firstInputTip;
-        secondInputTip = secondInputTip == null ? "Re-enter new passcode" : secondInputTip;
+        firstInputTip = firstInputTip == null ? "Ingrese pinde 4 digitos" : firstInputTip;
+        secondInputTip = secondInputTip == null ? "Re-ingrese pin" : secondInputTip;
         wrongLengthTip = wrongLengthTip == null ? firstInputTip : wrongLengthTip;
-        wrongInputTip = wrongInputTip == null ? "Passcode do not match" : wrongInputTip;
-        correctInputTip = correctInputTip == null ? "Passcode is correct" : correctInputTip;
+        wrongInputTip = wrongInputTip == null ? "Contraseñas no coinciden" : wrongInputTip;
+        correctInputTip = correctInputTip == null ? "Contraseña correcta" : correctInputTip;
 
         init();
     }
